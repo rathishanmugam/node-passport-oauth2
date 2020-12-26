@@ -1,0 +1,17 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    h1.Banner Log in
+    div.Message
+      div.Title
+        h3 click
+        h1 login button
+      span.Details Access the  Portal
+    div.NavButtons
+      if isAuthenticated
+        a(href="/user")
+          div.NavButton User Details!
+      else
+        a(href="/login")
+          div.NavButton Log in
